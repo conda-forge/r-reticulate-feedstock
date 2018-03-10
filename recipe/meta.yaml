@@ -29,10 +29,12 @@ requirements:
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
+    - r-jsonlite
 
   run:
     - r-base
     - r-rcpp
+    - r-jsonlite
 
 test:
   commands:
