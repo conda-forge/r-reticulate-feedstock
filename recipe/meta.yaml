@@ -1,4 +1,4 @@
-{% set version = '1.6' %}
+{% set version = "1.7" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/reticulate_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: 15a5d1de30427e421be9fda1fe50b3e42d529ba57f5d1aaf8c73f6ed3a8fd20c
+  sha256: bed3c72890f178490055e19a8fb64631180dad877ab545633af7f2ba206110be
 
 build:
   number: 0
