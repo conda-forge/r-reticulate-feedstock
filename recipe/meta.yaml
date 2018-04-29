@@ -27,6 +27,7 @@ requirements:
     - r-base
     - r-rcpp >=0.12.7
     - r-jsonlite
+    - r-matrix
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -35,6 +36,7 @@ requirements:
     - r-base
     - r-rcpp >=0.12.7
     - r-jsonlite
+    - r-matrix
     - libgcc  # [not win]
 
 test:
