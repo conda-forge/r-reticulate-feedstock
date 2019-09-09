@@ -1,4 +1,4 @@
-{% set version = '1.12' %}
+{% set version = '1.13' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,21 +10,21 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: 6b82edf9fc7d1f98d5632bc94476bd10b39134a7bb267120b5e979a4590e195f
+  sha256: adbe41d556b667c4419d563680f8608a56b0f792b8bc427b3bf4c584ff819de3
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_cxx') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -63,7 +63,7 @@ extra:
 # Package: reticulate
 # Type: Package
 # Title: Interface to 'Python'
-# Version: 1.12
+# Version: 1.13
 # Authors@R: c( person("Kevin", "Ushey", role = c("aut", "cre"), email = "kevin@rstudio.com"), person("JJ", "Allaire", role = c("aut"), email = "jj@rstudio.com"), person("RStudio", role = c("cph", "fnd")), person("Yuan", "Tang", role = c("aut", "cph"), email = "terrytangyuan@gmail.com", comment = c(ORCID = "0000-0001-5243-233X")), person("Dirk", "Eddelbuettel", role = c("ctb", "cph"), email = "edd@debian.org"), person("Bryan", "Lewis", role = c("ctb", "cph"), email = "blewis@illposed.net"), person("Marcus", "Geelnard", role = c("ctb", "cph"), comment = "TinyThread library, http://tinythreadpp.bitsnbites.eu/") )
 # Description: Interface to 'Python' modules, classes, and functions. When calling into 'Python', R data types are automatically converted to their equivalent 'Python' types. When values are returned from 'Python' to R they are converted back to R types. Compatible with all versions of 'Python' >= 2.7.
 # License: Apache License 2.0
@@ -79,8 +79,8 @@ extra:
 # RoxygenNote: 6.1.1
 # VignetteBuilder: knitr
 # NeedsCompilation: yes
-# Packaged: 2019-04-09 20:23:08 UTC; kevin
+# Packaged: 2019-07-24 21:47:39 UTC; kevinushey
 # Author: Kevin Ushey [aut, cre], JJ Allaire [aut], RStudio [cph, fnd], Yuan Tang [aut, cph] (<https://orcid.org/0000-0001-5243-233X>), Dirk Eddelbuettel [ctb, cph], Bryan Lewis [ctb, cph], Marcus Geelnard [ctb, cph] (TinyThread library, http://tinythreadpp.bitsnbites.eu/)
 # Maintainer: Kevin Ushey <kevin@rstudio.com>
 # Repository: CRAN
-# Date/Publication: 2019-04-12 06:55:02 UTC
+# Date/Publication: 2019-07-24 22:40:03 UTC
