@@ -40,14 +40,18 @@ requirements:
     - r-matrix
     - r-rcpp >=0.12.7
     - r-jsonlite
+    - r-png
     - r-rappdirs
+    - r-withr
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp >=0.12.7
     - r-jsonlite
+    - r-png
     - r-rappdirs
+    - r-withr
 
 test:
   commands:
