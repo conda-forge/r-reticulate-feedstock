@@ -1,4 +1,4 @@
-{% set version = "1.18" %}
+{% set version = "1.19" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: b33f855a58f446eefbe38df8a1a4865390f5d4ebd64b2c72266baaee64628513
+  sha256: 42104440f0c5918336c9dc343cfed85b5cdc16f278406779dea518bf438360fd
 
 build:
   merge_build_host: true  # [win]
