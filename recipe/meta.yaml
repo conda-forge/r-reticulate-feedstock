@@ -26,6 +26,7 @@ requirements:
     - r-matrix                   # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
     - r-jsonlite                 # [build_platform != target_platform]
+    - r-png                      # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
@@ -40,14 +41,18 @@ requirements:
     - r-matrix
     - r-rcpp >=0.12.7
     - r-jsonlite
+    - r-png
     - r-rappdirs
+    - r-withr
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp >=0.12.7
     - r-jsonlite
+    - r-png
     - r-rappdirs
+    - r-withr
 
 test:
   commands:
