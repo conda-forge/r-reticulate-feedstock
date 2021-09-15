@@ -1,4 +1,4 @@
-{% set version = "1.20" %}
+{% set version = "1.21" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: 7019404c8097821f38577c44f9630132c9ae0f9b148dc1950047d2d1c062c82b
+  sha256: b4553173d55f624462eb30b51f054d6a39f4e77c6d23014a6611b6ebc0284bcb
 
 build:
   merge_build_host: true  # [win]
@@ -40,6 +40,7 @@ requirements:
     - r-base
     - r-matrix
     - r-rcpp >=0.12.7
+    - r-here
     - r-jsonlite
     - r-png
     - r-rappdirs
@@ -49,6 +50,7 @@ requirements:
     - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp >=0.12.7
+    - r-here
     - r-jsonlite
     - r-png
     - r-rappdirs
@@ -64,7 +66,8 @@ about:
   license: Apache-2.0
   summary: Interface to 'Python' modules, classes, and functions. When calling into 'Python', R data types are automatically converted to their equivalent 'Python' types. When values are returned from 'Python' to R they are converted back to R types. Compatible with all versions of 'Python' >= 2.7.
   license_family: APACHE
-  license_file: LICENSE
+  license_file:
+    - LICENSE
 
 extra:
   recipe-maintainers:
