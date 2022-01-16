@@ -1,4 +1,4 @@
-{% set version = "1.22" %}
+{% set version = "1.23" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: b06e7b39abf08ae9604ea26d02e3c6e4ef6dcc4b6c7c98118fd85192f615f56c
+  sha256: fea04a3ff33c71f1910d65000a93c6882180ca03f8657ee118ea9e79786c36d6
 
 build:
   merge_build_host: true  # [win]
@@ -25,6 +25,7 @@ requirements:
     - r-lattice                  # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
+    - r-rcpptoml                 # [build_platform != target_platform]
     - r-jsonlite                 # [build_platform != target_platform]
     - r-png                      # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
@@ -40,6 +41,7 @@ requirements:
     - r-base
     - r-matrix
     - r-rcpp >=0.12.7
+    - r-rcpptoml
     - r-here
     - r-jsonlite
     - r-png
@@ -50,6 +52,7 @@ requirements:
     - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp >=0.12.7
+    - r-rcpptoml
     - r-here
     - r-jsonlite
     - r-png
