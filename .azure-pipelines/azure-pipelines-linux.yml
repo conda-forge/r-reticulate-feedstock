@@ -8,6 +8,10 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
+      linux_64_r_base3.6:
+        CONFIG: linux_64_r_base3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_r_base4.0:
         CONFIG: linux_64_r_base4.0
         UPLOAD_PACKAGES: 'True'
@@ -16,6 +20,10 @@ jobs:
         CONFIG: linux_64_r_base4.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_ppc64le_r_base3.6:
+        CONFIG: linux_ppc64le_r_base3.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
       linux_ppc64le_r_base4.0:
         CONFIG: linux_ppc64le_r_base4.0
         UPLOAD_PACKAGES: 'True'
