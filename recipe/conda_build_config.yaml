@@ -1,0 +1,4 @@
+r_base:
+  - 3.6  # [(linux and not (aarch64 or ppc64le)) or win or (osx and not arm64)]
+  - 4.0
+  - 4.1
