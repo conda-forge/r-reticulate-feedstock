@@ -17,9 +17,6 @@ jobs:
       osx_64_r_base4.1:
         CONFIG: osx_64_r_base4.1
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_r_base3.6:
-        CONFIG: osx_arm64_r_base3.6
-        UPLOAD_PACKAGES: 'True'
       osx_arm64_r_base4.0:
         CONFIG: osx_arm64_r_base4.0
         UPLOAD_PACKAGES: 'True'
