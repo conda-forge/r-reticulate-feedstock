@@ -1,11 +1,11 @@
-About r-reticulate
-==================
+About r-reticulate-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-reticulate-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rstudio/reticulate
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-reticulate-feedstock/blob/main/LICENSE.txt)
 
 Summary: Interface to 'Python' modules, classes, and functions. When calling into 'Python', R data types are automatically converted to their equivalent 'Python' types. When values are returned from 'Python' to R they are converted back to R types. Compatible with all versions of 'Python' >= 2.7.
 
