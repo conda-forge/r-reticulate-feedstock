@@ -22,12 +22,12 @@ build:
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-lattice                  # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
     - r-rcpptoml                 # [build_platform != target_platform]
     - r-jsonlite                 # [build_platform != target_platform]
     - r-png                      # [build_platform != target_platform]
+    - r-rlang                    # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
@@ -40,23 +40,25 @@ requirements:
   host:
     - r-base
     - r-matrix
-    - r-rcpp >=0.12.7
+    - r-rcpp >=1.0.7
     - r-rcpptoml
     - r-here
     - r-jsonlite
     - r-png
     - r-rappdirs
+    - r-rlang
     - r-withr
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
-    - r-rcpp >=0.12.7
+    - r-rcpp >=1.0.7
     - r-rcpptoml
     - r-here
     - r-jsonlite
     - r-png
     - r-rappdirs
+    - r-rlang
     - r-withr
 
 test:
