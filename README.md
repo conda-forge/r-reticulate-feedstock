@@ -9,6 +9,8 @@ Package license: Apache-2.0
 
 Summary: Interface to 'Python' modules, classes, and functions. When calling into 'Python', R data types are automatically converted to their equivalent 'Python' types. When values are returned from 'Python' to R they are converted back to R types. Compatible with all versions of 'Python' >= 2.7.
 
+Documentation: https://rstudio.github.io/reticulate/
+
 Current build status
 ====================
 
