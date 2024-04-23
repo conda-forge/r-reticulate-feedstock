@@ -1,4 +1,4 @@
-{% set version = "1.36.0" %}
+{% set version = "1.36.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: f48c2174c27d8cf13731447dd635d15bbe83216670a8d12dbfe6f06b236bbd2f
+  sha256: 7c7d37f4a483d70152870895ed80574dc51b0015c176d18b6c84e38baa33dd30
 
 build:
   merge_build_host: true  # [win]
@@ -29,7 +29,9 @@ requirements:
     - r-png                        # [build_platform != target_platform]
     - r-rlang                      # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
+    - {{ stdlib("c") }}            # [not win]
     - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib("c") }}            # [win]
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
