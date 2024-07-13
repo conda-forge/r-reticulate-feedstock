@@ -11,7 +11,7 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
   sha256: cb2f313e2351a3cde03be55561b592318ec5376fba3b10e371eeff1986deca8d
   patches:
-    - patches/0001-std-namespace.patch
+    - patches/0001-include-signal.patch
 
 build:
   number: 1
