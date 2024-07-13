@@ -1,0 +1,23 @@
+From bd9123056a3ffb5f55ee6d440136f65c27a8c283 Mon Sep 17 00:00:00 2001
+From: Mervin M Fansler <mmfansler@gmail.com>
+Date: Sat, 13 Jul 2024 20:25:36 +0200
+Subject: [PATCH] std namespace
+
+---
+ src/event_loop.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/event_loop.cpp b/src/event_loop.cpp
+index f71d61b7..5afaf2d0 100644
+--- a/src/event_loop.cpp
++++ b/src/event_loop.cpp
+@@ -37,7 +37,7 @@ namespace event_loop {
+ namespace {
+ 
+ // Tracks whether we've requested Python to poll on the main thread.
+-volatile sig_atomic_t s_pollingRequested;
++volatile std::sig_atomic_t s_pollingRequested;
+ bool s_flush_std_buffers = true;
+ 
+ // Forward declarations
+ 
