@@ -1,0 +1,35 @@
+From 098b124e2ec1101f85282399c34280b50af470b1 Mon Sep 17 00:00:00 2001
+From: Mervin M Fansler <mmfansler@gmail.com>
+Date: Sat, 13 Jul 2024 21:12:21 +0200
+Subject: [PATCH] include signal.h
+
+---
+ src/event_loop.cpp | 2 ++
+ src/python.cpp     | 1 +
+ 2 files changed, 3 insertions(+)
+
+diff --git a/src/event_loop.cpp b/src/event_loop.cpp
+index f71d61b7..ab694301 100644
+--- a/src/event_loop.cpp
++++ b/src/event_loop.cpp
+@@ -31,6 +31,8 @@ using namespace reticulate::libpython;
+ #include "signals.h"
+ #include "tinythread.h"
+ 
++#include <signal.h>
++
+ namespace reticulate {
+ namespace event_loop {
+ 
+diff --git a/src/python.cpp b/src/python.cpp
+index 1c00d4ed..88043cf9 100644
+--- a/src/python.cpp
++++ b/src/python.cpp
+@@ -15,6 +15,7 @@ using namespace Rcpp;
+ #include "tinythread.h"
+ 
+ #include <fstream>
++#include <signal.h>
+ #include <time.h>
+ 
+ #ifndef _WIN32

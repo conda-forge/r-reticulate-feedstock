@@ -1,6 +1,5 @@
 {% set version = "1.38.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-reticulate
@@ -11,10 +10,11 @@ source:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
   sha256: cb2f313e2351a3cde03be55561b592318ec5376fba3b10e371eeff1986deca8d
+  patches:
+    - patches/0001-include-signal.patch
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,7 +52,6 @@ requirements:
     - r-withr
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp >=1.0.7
     - r-rcpptoml
