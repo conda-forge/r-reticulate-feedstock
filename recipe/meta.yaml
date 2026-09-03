@@ -1,4 +1,4 @@
-{% set version = "1.46.0" %}
+{% set version = "1.47.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/reticulate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/reticulate/reticulate_{{ version }}.tar.gz
-  sha256: ddce0df52079ff6df2655e65e141d9f7c685ba3713200e65a69adeb5cde90765
+  sha256: 5f566b8226b1c12cd4cf833b8c0750a414ca56fa4c5fe5d9a6f71b97147a7619
   patches:
     - patches/0001-include-signal.patch
 
